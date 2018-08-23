@@ -4,14 +4,13 @@ const app = getApp()
 
 Page({
   clickMe: function(){
-    //this.setData({msg: "丑逼走开"})
     wx.navigateTo({
       url: '../chat/chat'
     })
   },
 
   data: {
-    motto: '小哥哥小姐姐，我想撩你，可以吗？',
+    motto: '小哥哥小姐姐，我想撩你，可以教我吗？',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
