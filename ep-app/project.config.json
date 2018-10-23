@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件。",
+  "cloudfunctionRoot": "./cloudFunction",
 	"packOptions": {
 		"ignore": []
 	},
@@ -12,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx7ef70916d5af2796",
+	"appid": "wx9a1601155dd33258",
 	"projectname": "earthy_prattle",
 	"isGameTourist": false,
 	"condition": {

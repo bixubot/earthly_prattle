@@ -10,5 +10,6 @@
     "navigationBarTitleText": "土味情话",
     "navigationBarTextStyle":"white",
     "navigationStyle": "custom"
-  }
+  },
+  "cloud":true
 }

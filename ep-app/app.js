@@ -32,6 +32,10 @@ App({
         }
       }
     })
+    wx.cloud.init({
+      traceUser: true,
+      env: 'earthly-prattle-cldb-e3013c'
+    })
   },
   globalData: {
     userInfo: null
