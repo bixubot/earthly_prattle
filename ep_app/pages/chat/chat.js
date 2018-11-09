@@ -13,9 +13,9 @@ Page({
       },
       success: function (res) {
         var pages = getCurrentPages()
-        debugger
+        console.log(res)
         pages[pages.length - 1].setData({
-          name: res.result[0]
+          name: res.result.data[0]
         })
       },
       fail: console.error
