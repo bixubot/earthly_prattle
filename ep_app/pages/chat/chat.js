@@ -1,8 +1,20 @@
 //chat.js
 Page({
+  back: function () {
+    wx.navigateTo({
+      url: '../index/index'
+    })
+  },
   data: {
   },
   onLoad: function () {
+    wx.setNavigationBarTitle({
+      title: getApp().globalData.userInfo.nickName,
+      });
+    wx.setNavigationBarColor({
+      frontColor: "#000000",
+      backgroundColor: "#cccccc"
+    });
     wx.cloud.callFunction({
       // 云函数名称
       name: 'getPrattle',
@@ -13,7 +25,6 @@ Page({
       },
       success: function (res) {
         var pages = getCurrentPages()
-        console.log(res)
         pages[pages.length - 1].setData({
           name: res.result.data[0]
         })

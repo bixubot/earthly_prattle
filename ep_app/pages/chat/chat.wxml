@@ -1,4 +1,10 @@
 <view class="container">
+
+  <view class="backButtonView">
+    <image class="image" src='../../srcs/img/back_button.png' mode='aspectFit'></image>
+    <button class="back" bindtap="back"> </button>
+  </view>
+  
   <text>{{msg}}</text>
   <text>{{name}}</text>
 </view>

@@ -1,0 +1,24 @@
+.back {
+  border: 0 solid #ffffff;
+  border-radius: 500px;
+  box-shadow: 4px 1px 1px #cccccc;
+  font-size: 14pt;
+  width: 50rpx;
+  height: 50rpx;
+  opacity:0;
+  background: transparent
+}
+
+.image {
+  width: 50rpx;
+  height: 50rpx;
+  position:fixed;
+}
+
+.backButtonView {
+  top: 36px;
+  left: 35px;
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute
+}
