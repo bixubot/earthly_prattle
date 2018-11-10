@@ -22,43 +22,8 @@
   color: #fff;
 }
 
-.maleBtn {
-  font-size: 30pt;
-  width: 100px;
-  height: 100px;
-  border-radius: 25px;
-  box-shadow: 4px 1px 1px #cccccc;
-  background: white;
-  color:cornflowerblue;
-  float:left;
-  margin-right: 20px;
-}
-.maleBtn::after{  
-  border:5px solid white;  
-}  
-
-.femaleBtn {
-  font-size: 30pt;
-  width: 100px;
-  height: 100px;
-  border-radius: 25px;
-  box-shadow: 4px 1px 1px #cccccc;
-  background: white;
-  color: coral;
-  float:right;
-  margin-left: 20px;
-}
-.femaleBtn::after{  
-  border:5px solid white;  
-}  
-
-.chooseGender {
-  margin-top: 200rpx;
-  margin-bottom: 0rpx;
-}
-
 .enterChat {
-  bottom: 0;
+  bottom: 50px;
 }
 
 .clickMe {
@@ -70,7 +35,7 @@
   margin-bottom: 20px;
   background: transparent;
 }
-.clickMe::after{  
+.clickMe::after{
   border:5px solid white;  
 }  
 

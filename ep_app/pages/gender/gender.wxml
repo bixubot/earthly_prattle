@@ -1,0 +1,24 @@
+<!--pages/gender/gender.wxml-->
+
+<view class="container">
+  <view class="question">
+    <text>{{instruction}}</text>
+  </view>
+  <view class="choosegender">
+    <view class="maleView">
+      <button style="border:{{maleBdr}}; box-shadow:{{maleBs}}; -webkit-box-shadow:{{maleWbs}}" class="maleBtn" bindtap="tapMale">♂</button>
+      <view style="border:{{maleTextBdr}};border-radius:20px;width:95px;">
+        <text style="color:{{maleColor}};">小哥哥</text>
+      </view>
+    </view>
+    <view class="femaleView">
+      <button style="border:{{femaleBdr}}; box-shadow:{{femaleBs}}; -webkit-box-shadow:{{femaleWbs}}" class="femaleBtn" bindtap="tapFemale">♀</button>
+      <view style="border:{{femaleTextBdr}};border-radius:20px;width:95px;">
+        <text style="color:{{femaleColor}};">小姐姐</text>
+      </view>
+    </view>
+  </view>
+  <view class="clickMeView">
+    <button class="clickMe" bindtap="clickMe">快开始吧</button>
+  </view>
+</view>

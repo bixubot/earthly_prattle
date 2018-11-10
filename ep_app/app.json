@@ -1,15 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/chat/chat"
+    "pages/chat/chat",
+    "pages/gender/gender"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "土味情话",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
   },
-  "cloud":true
+  "cloud": true
 }

@@ -7,12 +7,9 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="choosegender">
-    <button class="maleBtn" bindtap="tapMale">♂</button>
-    <button class="femaleBtn" bindtap="tapFemale">♀</button>
-  </view>
+
   <view class="enterChat">
-    <button class="clickMe" bindtap="clickMe">撩我</button>
+    <button class="clickMe" bindtap="clickMe">开撩</button>
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
     </view>

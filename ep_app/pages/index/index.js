@@ -7,18 +7,19 @@ Page({
     motto: '小哥哥小姐姐，我想撩你，可以教我吗？',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    genderSelected: null,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
 
   clickMe: function(){
     if (this.data.hasUserInfo == true){
       wx.navigateTo({
-        url: '../chat/chat'
+        url: '../gender/gender'
       })
     } else {
       wx.showModal({
         title: '请问你是？',
-        content: '请先允许咱获取您的信息哟！（不听不听，王八念经...）',
+        content: '请先允许咱获取您的信息哟！\r\n（不听不听，王八念经...）',
         confirmText: "好的哟~",
         showCancel: false
       })
