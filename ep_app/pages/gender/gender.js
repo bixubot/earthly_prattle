@@ -58,7 +58,7 @@ Page({
       })
     } else {
       wx.showModal({
-        title: '未知错误 Σ(っ °Д °;)っ',
+        title: '性别不明错误 Σ(っ °Д °;)っ',
         content: '请允许土酱向您致以真诚的歉意！\r\n┑(￣Д ￣)┍',
         confirmText: "好的哟~",
         showCancel: false

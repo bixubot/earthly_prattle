@@ -34,6 +34,9 @@
   height: 90rpx;
   margin-bottom: 20px;
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .clickMe::after{
   border:5px solid white;  
