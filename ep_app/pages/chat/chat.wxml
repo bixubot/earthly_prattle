@@ -1,10 +1,12 @@
 <view class="container">
-
-  <view class="backButtonView">
-    <image class="image" src='../../srcs/img/back_button.png' mode='aspectFit'></image>
-    <button class="back" bindtap="back"> </button>
+  <view class="headerView">
+      <view class="backButtonView">
+        <image class="image"    src='../../srcs/img/back_button.png' mode='aspectFit'></image>
+        <button class="back" bindtap="back"> </button>
+      </view>
+      <text class="name">{{name}}</text>
   </view>
-  
-  <text>{{msg}}</text>
-  <text>{{name}}</text>
+  <view class="chatView">
+    <text>{{msg}}</text>
+  </view>  
 </view>
