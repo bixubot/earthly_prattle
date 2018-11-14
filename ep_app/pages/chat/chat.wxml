@@ -1,4 +1,16 @@
-<view class="container">
+<template name="bubble">
+  <view wx:if="{{id % 2 == 0}}">
+    <div class="speech-bubble speech-bubble-left"> 
+      <p> {{message}} </p> 
+    </div>
+  </view>
+  <view wx:else>
+    <div class="speech-bubble speech-bubble-right"> 
+      <p> {{message}} </p>
+    </div>
+  </view>
+</template>
+
   <view class="headerView">
       <view class="backButtonView">
         <image class="image"    src='../../srcs/img/back_button.png' mode='aspectFit'></image>
@@ -6,7 +18,8 @@
       </view>
       <text class="name">{{name}}</text>
   </view>
-  <view class="chatView">
-    <text>{{msg}}</text>
-  </view>  
-</view>
+  <scroll-view class="chatView" scroll-y="true">
+    <block wx:for="{{ messages }}" wx:key="messages{{ index }}" >
+      <template is="bubble" data="{{ ...messages[index] }}" />
+    </block>
+  </scroll-view>

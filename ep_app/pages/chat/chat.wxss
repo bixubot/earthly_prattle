@@ -12,8 +12,8 @@
 }
 
 .image {
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .backButtonView {
@@ -34,7 +34,7 @@
   color:#000000;
   text-align: center;
   background-size: cover;
-  background-color: rgb(245, 212, 218, 0.027);
+  background-color: rgba(0, 0, 0, 0.027);
 }
 
 .name{
@@ -50,4 +50,53 @@
   text-align: center;
   background-size: cover;
   background-color: rgb(241, 136, 154);
+}
+
+.speech-bubble {   
+  position: relative;   
+  background-color: #ffffff;
+  padding:10px;   
+    
+  width: auto;   
+  height: auto;   
+    
+  color: rgb(0, 0, 0);   
+  text-align: center;   
+  border-radius: 10px;   
+    
+  font-family: sans-serif; 
+  display: table;   
+}   
+    
+.speech-bubble:after {   
+  content: '';   
+  position: absolute;
+  background-color: #ffffff;   
+    
+  width: 0;   
+  height: 0;   
+    
+  border: 15px solid;   
+}
+
+.speech-bubble-left:after {   
+  border-right-color: #ffffff;  
+    
+  top: 50%;   
+  right: 100%;   
+  margin-top: -15px;      
+}
+
+.speech-bubble-right:after {   
+  border-left-color: #ffffff;   
+    
+  left: 100%;   
+  top: 50%;   
+  margin-top: -15px;      
+}
+
+.speech-bubble p {   
+  display: table-cell;   
+  vertical-align: middle;
+  margin: 10px; 
 }

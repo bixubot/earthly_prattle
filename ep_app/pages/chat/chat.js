@@ -6,11 +6,16 @@ Page({
     })
   },
   data: {
+    messages: [],         // 聊天记录
+    msg: '',              // 当前输入
+    scrollTop: 0,         // 页面的滚动值
+    lastId: '',           // 最后一条消息的ID
+    isFirstSend: true     // 是否第一次发送消息(区分历史和新加)
   },
   onLoad: function () {
-    wx.setNavigationBarTitle({
-      title: getApp().globalData.userInfo.nickName,
-      });
+    getCurrentPages()[getCurrentPages().length - 1].setData({
+      name: getApp().globalData.userInfo.nickName
+    });
     wx.setNavigationBarColor({
       frontColor: "#000000",
       backgroundColor: "#cccccc"
@@ -30,9 +35,21 @@ Page({
         })
       },
       fail: console.error
-    }),
-    this.setData({
-      msg: "丑逼走开"
     })
+  },
+  onReady: function(){
+    const data = ["Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too"];
+    let messages = this.data.messages;
+    let lastId = this.data.lastId;
+    for (var i = 0; i < data.length; i++){
+      let nums = messages.length;
+      const input = {
+        id: `${++nums}`,
+        message: data[i]
+      };
+      messages.push(input);
+      lastId = `${nums}`;
+    }
+    this.setData({messages: messages, lastId : lastId});
   }
 })
