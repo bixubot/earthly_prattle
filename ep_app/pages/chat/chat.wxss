@@ -52,51 +52,80 @@
   background-color: rgb(241, 136, 154);
 }
 
-.speech-bubble {   
+.speech-bubble-left {   
   position: relative;   
   background-color: #ffffff;
   padding:10px;   
     
   width: auto;   
-  height: auto;   
-    
+  height: auto;
+  margin-right:auto; 
+  margin-left:15px; 
+
   color: rgb(0, 0, 0);   
   text-align: center;   
   border-radius: 10px;   
     
   font-family: sans-serif; 
   display: table;   
-}   
+}
+
+.speech-bubble-right {   
+  position: relative;   
+  background-color: #91ED61;
+  padding:10px;
+  margin-left:auto; 
+  margin-right:15px; 
     
-.speech-bubble:after {   
+  width: auto;   
+  height: auto;
+    
+  color: rgb(0, 0, 0);   
+  text-align: center;   
+  border-radius: 10px;   
+    
+  font-family: sans-serif; 
+  display: table; 
+}
+
+.speech-bubble-left:after {   
+  background-color: #ffffff; 
+
   content: '';   
   position: absolute;
-  background-color: #ffffff;   
     
   width: 0;   
   height: 0;   
     
-  border: 15px solid;   
-}
-
-.speech-bubble-left:after {   
-  border-right-color: #ffffff;  
-    
+  border: 15px solid;
   top: 50%;   
   right: 100%;   
-  margin-top: -15px;      
+  margin-top: -15px;
+  border-color: rgb(241, 136, 154) #ffffff rgb(241, 136, 154) rgb(241, 136, 154);      
 }
 
 .speech-bubble-right:after {   
-  border-left-color: #ffffff;   
+  background-color: #ffffff;
+  content: '';   
+  position: absolute;
     
+  width: 0;   
+  height: 0;   
+    
+  border: 15px solid;    
+  
   left: 100%;   
   top: 50%;   
-  margin-top: -15px;      
+  margin-top: -15px;
+  border-color: rgb(241, 136, 154) rgb(241, 136, 154) rgb(241, 136, 154) #91ED61;       
 }
 
 .speech-bubble p {   
   display: table-cell;   
   vertical-align: middle;
   margin: 10px; 
+}
+
+.messageBlock{
+  position:relative;
 }

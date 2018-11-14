@@ -1,11 +1,11 @@
 <template name="bubble">
   <view wx:if="{{id % 2 == 0}}">
-    <div class="speech-bubble speech-bubble-left"> 
+    <div class="speech-bubble-left"> 
       <p> {{message}} </p> 
     </div>
   </view>
   <view wx:else>
-    <div class="speech-bubble speech-bubble-right"> 
+    <div class="speech-bubble-right"> 
       <p> {{message}} </p>
     </div>
   </view>
@@ -19,7 +19,7 @@
       <text class="name">{{name}}</text>
   </view>
   <scroll-view class="chatView" scroll-y="true">
-    <block wx:for="{{ messages }}" wx:key="messages{{ index }}" >
+    <block class="messageBlock" wx:for="{{ messages }}" wx:key="messages{{ index }}" >
       <template is="bubble" data="{{ ...messages[index] }}" />
     </block>
   </scroll-view>
