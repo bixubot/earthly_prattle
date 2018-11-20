@@ -1,25 +1,26 @@
 <template name="bubble">
-  <view wx:if="{{id % 2 == 0}}">
-    <div class="speech-bubble-left"> 
+  <view wx:if="{{index % 2 == 0}}">
+    <div class="speech-bubble-left" id="{{id}}"> 
       <p> {{message}} </p> 
     </div>
   </view>
   <view wx:else>
-    <div class="speech-bubble-right"> 
+    <div class="speech-bubble-right" id="{{id}}"> 
       <p> {{message}} </p>
     </div>
   </view>
 </template>
 
-  <view class="headerView">
-      <view class="backButtonView">
-        <image class="image"    src='../../srcs/img/back_button.png' mode='aspectFit'></image>
-        <button class="back" bindtap="back"> </button>
-      </view>
-      <text class="name">{{name}}</text>
-  </view>
-  <scroll-view class="chatView" scroll-y="true">
-    <block class="messageBlock" wx:for="{{ messages }}" wx:key="messages{{ index }}" >
-      <template is="bubble" data="{{ ...messages[index] }}" />
-    </block>
-  </scroll-view>
+<view class="headerView">
+    <view class="backButtonView">
+      <image class="image" src='../../srcs/img/back_button.png' mode='aspectFit'></image>
+      <button class="back" bindtap="back"> </button>
+    </view>
+    <text class="name">{{name}}</text>
+</view>
+
+<scroll-view class="chatView" scroll-y="true"  scroll-top="{{ scrollTop }}" scroll-into-view="{{ lastId }}" scroll-with-animation>
+  <block class="messageBlock" wx:for="{{ messages }}" wx:key="messages{{ index }}" >
+    <template is="bubble" data="{{ ...messages[index] }}" />
+  </block>
+</scroll-view>

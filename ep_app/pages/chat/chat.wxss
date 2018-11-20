@@ -43,10 +43,10 @@
 }
 
 .chatView {
-  position: fixed;
+  position: relative;
   top:120rpx;
-  width: 100%;
-  height:100%;
+  width: 750rpx;
+  height: 100vh;
   text-align: center;
   background-size: cover;
   background-color: rgb(241, 136, 154);
@@ -57,10 +57,11 @@
   background-color: #ffffff;
   padding:10px;   
     
-  width: auto;   
+  width: auto;
   height: auto;
-  margin-right:auto; 
-  margin-left:15px; 
+  margin-right:auto;
+  margin-left:15px;
+  margin-top:2px;
 
   color: rgb(0, 0, 0);   
   text-align: center;   
@@ -74,8 +75,9 @@
   position: relative;   
   background-color: #91ED61;
   padding:10px;
-  margin-left:auto; 
-  margin-right:15px; 
+  margin-left:auto;
+  margin-right:15px;
+  margin-top:2px;
     
   width: auto;   
   height: auto;
@@ -91,10 +93,10 @@
 .speech-bubble-left:after {   
   background-color: #ffffff; 
 
-  content: '';   
+  content: '';
   position: absolute;
     
-  width: 0;   
+  width: 0; 
   height: 0;   
     
   border: 15px solid;
@@ -112,8 +114,8 @@
   width: 0;   
   height: 0;   
     
-  border: 15px solid;    
-  
+  border: 15px solid;
+
   left: 100%;   
   top: 50%;   
   margin-top: -15px;
