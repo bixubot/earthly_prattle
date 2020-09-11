@@ -11,13 +11,7 @@
   </view>
 </template>
 
-<view class="headerView">
-    <view class="backButtonView">
-      <image class="image" src='../../srcs/img/back_button.png' mode='aspectFit'></image>
-      <button class="back" bindtap="back"> </button>
-    </view>
-    <text class="name">{{name}}</text>
-</view>
+<header hasBack="{{true}}" name="{{name}}"></header>
 
 <scroll-view class="chatView" scroll-y="true"  scroll-top="{{ scrollTop }}" scroll-into-view="{{ lastId }}" scroll-with-animation>
   <block class="messageBlock" wx:for="{{ messages }}" wx:key="messages{{ index }}" >

@@ -38,7 +38,7 @@ Page({
     })
   },
   onReady: function(){
-    const data = ["Love you idsajdiajdis jiadji asjdioasjdoiajd aiojdioajdio ajsdioja iodjasiod jaiodjad s", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too"];
+    const data = ["Love you idsajdiajdis jiadji asjdioasjdoiajd aiojdioajdio ajsdioja iodjasiod jaiodjad s", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?", "love you too", "Love you", "and you?"];
     let messages = this.data.messages;
     let lastId = this.data.lastId;
     for (var i = 0; i < data.length; i++){
@@ -51,6 +51,9 @@ Page({
       messages.push(input);
       lastId = `msg${nums}`;
     }
-    this.setData({messages: messages, lastId : lastId});
+    this.setData({
+      messages: messages,
+      lastId : lastId
+    });
   }
 })
